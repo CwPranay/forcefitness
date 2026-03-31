@@ -46,7 +46,7 @@ export function Gallery() {
                 />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
-                  <Badge className="bg-white text-foreground px-4 py-2 text-sm shadow-xl border-none">View Photo</Badge>
+                  
                 </div>
               </div>
             );
