@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -8,44 +7,44 @@ import { cn } from "@/lib/utils";
 
 const PLANS = [
   {
-    name: "Basic",
+    name: "Standard",
     price: "49",
-    description: "Perfect for casual gym-goers who want quality equipment.",
+    description: "Essential access for consistent fitness enthusiasts.",
     features: [
-      "Access to Gym Floor",
-      "Locker Room & Showers",
-      "1 Complementary Session",
+      "Access to All Gym Floors",
+      "Locker & Shower Facilities",
+      "Sanitized Equipment",
       "Standard Operating Hours",
-      "Mobile App Integration"
+      "Mobile Progress App"
     ],
     highlight: false
   },
   {
-    name: "Pro Performance",
+    name: "Premium Pro",
     price: "89",
-    description: "Our most popular plan for serious fitness enthusiasts.",
+    description: "The perfect balance of guidance and freedom.",
     features: [
-      "Everything in Basic",
+      "Everything in Standard",
       "Unlimited Group Classes",
-      "24/7 Premium Access",
+      "24/7 Priority Access",
       "Nutrition & Diet Plans",
-      "Sauna & Steam Room Access",
-      "Monthly Assessment"
+      "Sauna & Recovery Spa",
+      "Monthly Fitness Checkup"
     ],
     highlight: true,
-    badge: "Most Popular"
+    badge: "Most Trusted"
   },
   {
     name: "Elite Force",
     price: "199",
-    description: "The ultimate fitness experience with total guidance.",
+    description: "A total lifestyle transformation with expert support.",
     features: [
-      "Everything in Pro",
+      "Everything in Premium",
       "Weekly Personal Training",
-      "VIP Locker Access",
-      "Force Protein Bar Pass",
-      "Guest Passes (2/month)",
-      "Exclusive Events"
+      "Exclusive VIP Lockers",
+      "Protein Smoothie Pass",
+      "Monthly Guest Passes (3)",
+      "Elite Community Access"
     ],
     highlight: false
   }
@@ -53,71 +52,68 @@ const PLANS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24 bg-white relative">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-4 text-primary border-primary/20">Pricing Plans</Badge>
-          <h2 className="text-4xl md:text-5xl mb-6 font-headline">Simple Membership Options</h2>
-          <p className="text-muted-foreground text-lg">
-            Choose the plan that fits your lifestyle. No hidden fees, just transparent fitness.
+    <section id="pricing" className="section-padding bg-background relative overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <Badge variant="outline" className="mb-4 text-primary border-primary/20 px-4 py-1.5 rounded-full uppercase tracking-widest font-bold text-xs">Membership</Badge>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 font-headline">Simple Transparent Pricing</h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            No hidden fees, no complicated contracts. Just premium fitness.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
           {PLANS.map((plan, idx) => (
             <div
               key={idx}
               className={cn(
-                "relative flex flex-col p-8 rounded-3xl transition-all duration-300 border",
+                "relative flex flex-col p-10 rounded-[3rem] transition-all duration-500 border",
                 plan.highlight 
-                  ? "bg-foreground text-white border-foreground shadow-2xl scale-105 z-10" 
-                  : "bg-white text-foreground border-border hover:border-primary/50"
+                  ? "bg-white border-primary/20 shadow-2xl scale-105 z-10" 
+                  : "bg-white/50 border-border hover:border-primary/30 hover:bg-white"
               )}
             >
               {plan.badge && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <Badge className="bg-primary text-white py-1.5 px-4 text-sm font-semibold rounded-full border-none shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <Badge className="bg-primary text-white py-2 px-6 text-sm font-bold rounded-full border-none shadow-xl shadow-primary/30">
                     {plan.badge}
                   </Badge>
                 </div>
               )}
 
-              <div className="mb-8">
-                <h3 className="text-2xl font-headline mb-2">{plan.name}</h3>
-                <p className={cn("text-sm", plan.highlight ? "text-white/70" : "text-muted-foreground")}>
+              <div className="mb-10 text-center">
+                <h3 className="text-3xl font-headline mb-3">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm">
                   {plan.description}
                 </p>
               </div>
 
-              <div className="mb-8 flex items-baseline gap-1">
-                <span className="text-4xl font-bold font-headline">$</span>
-                <span className="text-6xl font-bold font-headline tracking-tight">{plan.price}</span>
-                <span className={cn("text-sm", plan.highlight ? "text-white/60" : "text-muted-foreground")}>/month</span>
+              <div className="mb-10 flex items-baseline justify-center gap-1">
+                <span className="text-3xl font-bold font-headline text-primary">$</span>
+                <span className="text-7xl font-bold font-headline tracking-tighter text-foreground">{plan.price}</span>
+                <span className="text-muted-foreground font-semibold">/mo</span>
               </div>
 
-              <div className="flex-1 mb-10 space-y-4">
+              <div className="flex-1 mb-12 space-y-5">
                 {plan.features.map((feature, fidx) => (
-                  <div key={fidx} className="flex items-center gap-3">
-                    <div className={cn(
-                      "flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center",
-                      plan.highlight ? "bg-primary text-white" : "bg-primary/10 text-primary"
-                    )}>
-                      <Check className="w-3 h-3 font-bold" />
+                  <div key={fidx} className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                      <Check className="w-3.5 h-3.5 stroke-[3]" />
                     </div>
-                    <span className="text-sm font-medium">{feature}</span>
+                    <span className="text-sm font-semibold text-foreground/80">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <Button 
                 className={cn(
-                  "w-full h-12 text-md rounded-xl font-semibold transition-all",
+                  "w-full h-16 text-lg rounded-2xl font-bold transition-all shadow-lg",
                   plan.highlight 
-                    ? "bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/20" 
-                    : "bg-secondary text-foreground hover:bg-primary hover:text-white"
+                    ? "bg-primary hover:bg-primary/90 text-white shadow-primary/20" 
+                    : "bg-background text-foreground hover:bg-primary hover:text-white"
                 )}
               >
-                Choose Plan
+                Start Journey
               </Button>
             </div>
           ))}
