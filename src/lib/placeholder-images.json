@@ -3,13 +3,13 @@
     {
       "id": "hero-gym",
       "description": "Premium modern gym interior with high-end equipment",
-      "imageUrl": "https://picsum.photos/seed/force1/1920/1080",
+      "imageUrl": "/ff-hero.avif",
       "imageHint": "modern gym"
     },
     {
       "id": "program-weight",
       "description": "Strength training area with dumbbells",
-      "imageUrl": "https://picsum.photos/seed/force2/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1734668489555-6a9b99e45451?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3ltJTIwc3RyZW5ndGglMjB0cmFuaW5nfGVufDB8fDB8fHww",
       "imageHint": "weight lifting"
     },
     {
@@ -39,25 +39,25 @@
     {
       "id": "gallery-1",
       "description": "Gym floor layout",
-      "imageUrl": "https://picsum.photos/seed/force7/800/600",
+      "imageUrl": "/ff-2.jpg",
       "imageHint": "gym floor"
     },
     {
       "id": "gallery-2",
       "description": "Locker room facilities",
-      "imageUrl": "https://picsum.photos/seed/force8/800/600",
+      "imageUrl": "/ff-3.avif",
       "imageHint": "modern locker"
     },
     {
       "id": "gallery-3",
       "description": "Group fitness class",
-      "imageUrl": "https://picsum.photos/seed/force9/800/600",
+      "imageUrl": "/ff-4.avif",
       "imageHint": "fitness class"
     },
     {
       "id": "gallery-4",
       "description": "Reception area",
-      "imageUrl": "https://picsum.photos/seed/force10/800/600",
+      "imageUrl": "/ff-5.avif",
       "imageHint": "gym reception"
     }
   ]

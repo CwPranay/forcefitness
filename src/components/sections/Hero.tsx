@@ -45,7 +45,7 @@ export function Hero() {
             <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-white text-xl font-bold rounded-3xl shadow-2xl shadow-primary/30 transition-all hover:scale-105 active:scale-95" asChild>
               <a href="#pricing">Join Now</a>
             </Button>
-            <Button size="lg" variant="outline" className="h-16 px-12 text-white border-2 border-white/80 hover:bg-white hover:text-primary text-xl font-bold rounded-3xl backdrop-blur-md transition-all hover:scale-105 active:scale-95 gap-3" asChild>
+            <Button size="lg" variant="outline" className="h-16 px-12 text-primary border-2 border-white/80 hover:bg-white hover:text-primary text-xl font-bold rounded-3xl backdrop-blur-md transition-all hover:scale-105 active:scale-95 gap-3" asChild>
               <a href="tel:07700077880">
                 <Phone className="w-5 h-5" />
                 Call Now
@@ -60,7 +60,7 @@ export function Hero() {
               "Expert Guidance",
               "Premium Equipment"
             ].map((feature) => (
-              <div key={feature} className="flex items-center gap-3 text-white/95 justify-center bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+              <div key={feature} className="flex items-center gap-3 text-primary justify-center bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
                 <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                 <span className="text-sm font-bold tracking-widest uppercase">{feature}</span>
               </div>
