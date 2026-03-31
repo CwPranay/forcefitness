@@ -66,13 +66,12 @@ export function Header() {
 
         {/* CTAs */}
         <div className="hidden lg:flex items-center gap-4">
-          <Button variant="ghost" size="sm" className={cn(
-            "gap-2 font-semibold",
-            isScrolled ? "text-foreground" : "text-white hover:bg-white/10"
-          )} asChild>
+          <Button variant="ghost" size="icon" className={cn(
+            "rounded-full h-10 w-10",
+            isScrolled ? "text-foreground hover:bg-primary/10" : "text-white hover:bg-white/10"
+          )} asChild title="Call Us">
             <a href="tel:07700077880">
-              <Phone className="w-4 h-4" />
-              07700077880
+              <Phone className="w-5 h-5" />
             </a>
           </Button>
           <Button size="sm" className="bg-primary hover:bg-primary/90 text-white font-bold px-6 shadow-lg shadow-primary/20" asChild>
@@ -114,7 +113,7 @@ export function Header() {
             <Button variant="outline" className="gap-2 h-14 text-lg font-bold" asChild>
               <a href="tel:07700077880">
                 <Phone className="w-5 h-5" />
-                Call 07700077880
+                Call Now
               </a>
             </Button>
             <Button className="bg-primary hover:bg-primary/90 text-white h-14 text-lg font-bold shadow-lg shadow-primary/20" asChild>
