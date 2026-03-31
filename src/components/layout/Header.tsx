@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -28,6 +27,15 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [mobileMenuOpen]);
+
   return (
     <header
       className={cn(
@@ -36,13 +44,13 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group z-50">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-headline text-xl font-bold italic group-hover:scale-105 transition-transform shadow-lg shadow-primary/20">
             F
           </div>
           <span className={cn(
             "font-headline text-2xl font-bold tracking-tighter transition-colors",
-            isScrolled ? "text-foreground" : "text-white"
+            isScrolled || mobileMenuOpen ? "text-foreground" : "text-white"
           )}>
             FORCE<span className="text-primary">FITNESS</span>
           </span>
@@ -82,42 +90,43 @@ export function Header() {
         {/* Mobile Menu Toggle */}
         <button
           className={cn(
-            "lg:hidden p-2 transition-colors",
-            isScrolled ? "text-foreground" : "text-white"
+            "lg:hidden p-2 transition-colors z-50",
+            isScrolled || mobileMenuOpen ? "text-foreground" : "text-white"
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle Menu"
         >
-          {mobileMenuOpen ? <X /> : <Menu />}
+          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Full Screen Mobile Nav */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 top-[60px] bg-background z-40 transition-transform duration-300",
+          "lg:hidden fixed inset-0 bg-background z-40 transition-transform duration-500 ease-in-out flex flex-col items-center justify-center",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex flex-col p-6 gap-6">
+        <div className="flex flex-col items-center gap-8 w-full px-6">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.label}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-xl font-bold border-b pb-4 border-border"
+              className="text-3xl font-bold text-foreground hover:text-primary transition-colors"
             >
               {item.label}
             </Link>
           ))}
-          <div className="grid grid-cols-1 gap-4 pt-4">
-            <Button variant="outline" className="gap-2 h-14 text-lg font-bold" asChild>
-              <a href="tel:07700077880">
-                <Phone className="w-5 h-5" />
-                Call Now
-              </a>
-            </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-white h-14 text-lg font-bold shadow-lg shadow-primary/20" asChild>
+          <div className="flex flex-col gap-4 w-full max-w-sm pt-8">
+            <Button className="bg-primary hover:bg-primary/90 text-white h-16 text-xl font-bold shadow-lg shadow-primary/20 rounded-2xl" asChild>
               <Link href="#pricing" onClick={() => setMobileMenuOpen(false)}>Join Now</Link>
+            </Button>
+            <Button variant="outline" className="gap-3 h-16 text-xl font-bold rounded-2xl border-2" asChild>
+              <a href="tel:07700077880">
+                <Phone className="w-6 h-6" />
+                Call Expert
+              </a>
             </Button>
           </div>
         </div>
