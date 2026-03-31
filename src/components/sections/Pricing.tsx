@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { cn } from "@/lib/utils";
 const PLANS = [
   {
     name: "Standard",
-    price: "49",
+    price: "1,499",
     description: "Essential access for consistent fitness enthusiasts.",
     features: [
       "Access to All Gym Floors",
@@ -21,12 +22,12 @@ const PLANS = [
   },
   {
     name: "Premium Pro",
-    price: "89",
+    price: "2,499",
     description: "The perfect balance of guidance and freedom.",
     features: [
       "Everything in Standard",
       "Unlimited Group Classes",
-      "24/7 Priority Access",
+      "Priority Access",
       "Nutrition & Diet Plans",
       "Sauna & Recovery Spa",
       "Monthly Fitness Checkup"
@@ -36,7 +37,7 @@ const PLANS = [
   },
   {
     name: "Elite Force",
-    price: "199",
+    price: "4,999",
     description: "A total lifestyle transformation with expert support.",
     features: [
       "Everything in Premium",
@@ -58,7 +59,7 @@ export function Pricing() {
           <Badge variant="outline" className="mb-4 text-primary border-primary/20 px-4 py-1.5 rounded-full uppercase tracking-widest font-bold text-xs">Membership</Badge>
           <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 font-headline">Simple Transparent Pricing</h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            No hidden fees, no complicated contracts. Just premium fitness.
+            No hidden fees, no complicated contracts. Just premium fitness in Dombivli.
           </p>
         </div>
 
@@ -89,8 +90,8 @@ export function Pricing() {
               </div>
 
               <div className="mb-10 flex items-baseline justify-center gap-1">
-                <span className="text-3xl font-bold font-headline text-primary">$</span>
-                <span className="text-7xl font-bold font-headline tracking-tighter text-foreground">{plan.price}</span>
+                <span className="text-3xl font-bold font-headline text-primary">₹</span>
+                <span className="text-6xl font-bold font-headline tracking-tighter text-foreground">{plan.price}</span>
                 <span className="text-muted-foreground font-semibold">/mo</span>
               </div>
 
@@ -113,7 +114,7 @@ export function Pricing() {
                     : "bg-background text-foreground hover:bg-primary hover:text-white"
                 )}
               >
-                Start Journey
+                Join Force
               </Button>
             </div>
           ))}
