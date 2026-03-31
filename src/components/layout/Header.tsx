@@ -107,6 +107,7 @@ export function Header() {
 
             <Button
               size="lg"
+              onClick={() => handleNavClick("#contact")}
               className="bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl px-8 shadow-xl shadow-primary/20 transition-all hover:scale-105"
             >
               Join Now
@@ -147,7 +148,7 @@ export function Header() {
           ))}
 
           <div className="flex flex-col gap-4 w-full max-w-sm pt-12">
-            <Button className="bg-primary text-white h-16 text-xl font-bold rounded-3xl">
+            <Button onClick={() => handleNavClick("#contact")}  className="bg-primary text-white h-16 text-xl font-bold rounded-3xl">
               Join Now
             </Button>
 
