@@ -1,3 +1,26 @@
+
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { Programs } from "@/components/sections/Programs";
+import { Trainers } from "@/components/sections/Trainers";
+import { Pricing } from "@/components/sections/Pricing";
+import { Gallery } from "@/components/sections/Gallery";
+import { Contact } from "@/components/sections/Contact";
+import { Footer } from "@/components/layout/Footer";
+
 export default function Home() {
-  return <></>;
+  return (
+    <main className="min-h-screen">
+      <Header />
+      <Hero />
+      <About />
+      <Programs />
+      <Trainers />
+      <Pricing />
+      <Gallery />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }

@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-gym",
+      "description": "Premium modern gym interior with high-end equipment",
+      "imageUrl": "https://picsum.photos/seed/force1/1920/1080",
+      "imageHint": "modern gym"
+    },
+    {
+      "id": "program-weight",
+      "description": "Strength training area with dumbbells",
+      "imageUrl": "https://picsum.photos/seed/force2/600/400",
+      "imageHint": "weight lifting"
+    },
+    {
+      "id": "program-cardio",
+      "description": "Row of modern treadmills in a bright gym",
+      "imageUrl": "https://picsum.photos/seed/force3/600/400",
+      "imageHint": "cardio equipment"
+    },
+    {
+      "id": "program-yoga",
+      "description": "Peaceful yoga studio with mats",
+      "imageUrl": "https://picsum.photos/seed/force4/600/400",
+      "imageHint": "yoga studio"
+    },
+    {
+      "id": "trainer-1",
+      "description": "Professional fitness trainer smiling",
+      "imageUrl": "https://picsum.photos/seed/force5/400/500",
+      "imageHint": "fitness trainer"
+    },
+    {
+      "id": "trainer-2",
+      "description": "Female athlete personal trainer",
+      "imageUrl": "https://picsum.photos/seed/force6/400/500",
+      "imageHint": "female athlete"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Gym floor layout",
+      "imageUrl": "https://picsum.photos/seed/force7/800/600",
+      "imageHint": "gym floor"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Locker room facilities",
+      "imageUrl": "https://picsum.photos/seed/force8/800/600",
+      "imageHint": "modern locker"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Group fitness class",
+      "imageUrl": "https://picsum.photos/seed/force9/800/600",
+      "imageHint": "fitness class"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Reception area",
+      "imageUrl": "https://picsum.photos/seed/force10/800/600",
+      "imageHint": "gym reception"
+    }
+  ]
 }
