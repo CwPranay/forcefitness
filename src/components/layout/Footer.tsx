@@ -53,16 +53,7 @@ export function Footer() {
             <p className="text-white/60 text-sm mb-6 leading-relaxed">
               Join 300+ members receiving expert fitness tips.
             </p>
-            <div className="flex flex-col gap-4">
-              <input 
-                type="email" 
-                placeholder="Email Address" 
-                className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-sm outline-none focus:border-primary transition-all w-full"
-              />
-              <button className="bg-primary hover:bg-primary/90 text-white rounded-2xl px-5 py-4 text-sm font-bold transition-all shadow-xl shadow-primary/10">
-                Subscribe Now
-              </button>
-            </div>
+            
           </div>
         </div>
 
