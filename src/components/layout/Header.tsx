@@ -77,7 +77,7 @@ export function Header() {
           <Button variant="ghost" size="icon" className={cn(
             "rounded-full h-11 w-11",
             isScrolled ? "text-foreground hover:bg-primary/10 hover:text-primary" : "text-white hover:bg-white/10"
-          )} asChild title="Call Expert">
+          )} asChild title="Call Now">
             <a href="tel:07700077880">
               <Phone className="w-5 h-5" />
             </a>
@@ -100,11 +100,11 @@ export function Header() {
         </button>
       </div>
 
-      {/* Full Screen Mobile Nav Overlay */}
+      {/* Full Screen Mobile Nav Overlay - Sliding from right */}
       <div
         className={cn(
           "lg:hidden fixed inset-0 bg-background z-40 transition-all duration-500 ease-in-out flex flex-col items-center justify-center",
-          mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full"
+          mobileMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
         )}
       >
         <div className="flex flex-col items-center gap-8 w-full px-6">
@@ -132,7 +132,7 @@ export function Header() {
             <Button variant="outline" className="gap-3 h-16 text-xl font-bold rounded-3xl border-2 hover:bg-muted" asChild>
               <a href="tel:07700077880">
                 <Phone className="w-6 h-6 text-primary" />
-                Call Expert
+                Call Now
               </a>
             </Button>
           </div>
