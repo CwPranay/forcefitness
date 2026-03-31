@@ -21,7 +21,7 @@ export function Hero() {
           priority
           data-ai-hint="modern gym interior"
         />
-        <div className="absolute inset-0 bg-black/45 z-0" />
+        <div className="absolute inset-0 bg-black/50 z-0" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -46,7 +46,7 @@ export function Hero() {
             <Button size="lg" className="h-16 px-10 bg-primary hover:bg-primary/90 text-white text-xl font-bold rounded-2xl shadow-2xl shadow-primary/30 transition-all hover:scale-105" asChild>
               <a href="#pricing">Join Now</a>
             </Button>
-            <Button size="lg" variant="outline" className="h-16 px-10 text-white border-white/40 hover:bg-white/10 text-xl font-bold rounded-2xl backdrop-blur-sm transition-all hover:scale-105 gap-2" asChild>
+            <Button size="lg" variant="outline" className="h-16 px-10 text-white border-white/60 hover:bg-white hover:text-primary text-xl font-bold rounded-2xl backdrop-blur-sm transition-all hover:scale-105 gap-2" asChild>
               <a href="tel:07700077880">
                 <Phone className="w-5 h-5" />
                 Call Now
