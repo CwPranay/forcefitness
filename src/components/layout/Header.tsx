@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Phone, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -37,10 +37,13 @@ export function Header() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-headline text-xl font-bold italic group-hover:scale-110 transition-transform">
+          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-headline text-xl font-bold italic group-hover:scale-105 transition-transform shadow-lg shadow-primary/20">
             F
           </div>
-          <span className="font-headline text-2xl font-bold tracking-tighter">
+          <span className={cn(
+            "font-headline text-2xl font-bold tracking-tighter transition-colors",
+            isScrolled ? "text-foreground" : "text-white"
+          )}>
             FORCE<span className="text-primary">FITNESS</span>
           </span>
         </Link>
@@ -51,7 +54,10 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
+              className={cn(
+                "text-sm font-semibold hover:text-primary transition-colors",
+                isScrolled ? "text-foreground" : "text-white/90 hover:text-white"
+              )}
             >
               {item.label}
             </Link>
@@ -59,27 +65,27 @@ export function Header() {
         </nav>
 
         {/* CTAs */}
-        <div className="hidden lg:flex items-center gap-3">
-          <Button variant="outline" size="sm" className="gap-2 border-primary/20 hover:bg-primary/5" asChild>
-            <a href="tel:+1234567890">
+        <div className="hidden lg:flex items-center gap-4">
+          <Button variant="ghost" size="sm" className={cn(
+            "gap-2 font-semibold",
+            isScrolled ? "text-foreground" : "text-white hover:bg-white/10"
+          )} asChild>
+            <a href="tel:+911234567890">
               <Phone className="w-4 h-4" />
-              Call
+              Call Now
             </a>
           </Button>
-          <Button variant="outline" size="sm" className="gap-2 text-green-600 border-green-200 hover:bg-green-50" asChild>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4" />
-              WhatsApp
-            </a>
-          </Button>
-          <Button size="sm" className="bg-primary hover:bg-primary/90 text-white" asChild>
+          <Button size="sm" className="bg-primary hover:bg-primary/90 text-white font-bold px-6 shadow-lg shadow-primary/20" asChild>
             <Link href="#pricing">Join Now</Link>
           </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="lg:hidden p-2 text-foreground"
+          className={cn(
+            "lg:hidden p-2 transition-colors",
+            isScrolled ? "text-foreground" : "text-white"
+          )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}
@@ -99,25 +105,19 @@ export function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-xl font-semibold border-b pb-2"
+              className="text-xl font-bold border-b pb-4 border-border"
             >
               {item.label}
             </Link>
           ))}
-          <div className="grid grid-cols-2 gap-4 pt-4">
-            <Button variant="outline" className="gap-2" asChild>
-              <a href="tel:+1234567890">
-                <Phone className="w-4 h-4" />
+          <div className="grid grid-cols-1 gap-4 pt-4">
+            <Button variant="outline" className="gap-2 h-14 text-lg font-bold" asChild>
+              <a href="tel:+911234567890">
+                <Phone className="w-5 h-5" />
                 Call Now
               </a>
             </Button>
-            <Button variant="outline" className="gap-2 text-green-600 border-green-200" asChild>
-              <a href="https://wa.me/1234567890">
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp
-              </a>
-            </Button>
-            <Button className="col-span-2 bg-primary hover:bg-primary/90 text-white" asChild>
+            <Button className="bg-primary hover:bg-primary/90 text-white h-14 text-lg font-bold shadow-lg shadow-primary/20" asChild>
               <Link href="#pricing" onClick={() => setMobileMenuOpen(false)}>Join Now</Link>
             </Button>
           </div>

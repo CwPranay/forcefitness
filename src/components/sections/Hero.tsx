@@ -4,60 +4,66 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Star, ChevronRight, CheckCircle2 } from "lucide-react";
+import { Phone, ChevronRight, CheckCircle2 } from "lucide-react";
 
 export function Hero() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-gym");
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden text-center">
+      {/* Image with light overlay */}
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImage?.imageUrl || ""}
-          alt="Modern Gym Interior"
+          alt="Force Fitness Gym Interior"
           fill
-          className="object-cover brightness-[0.4]"
+          className="object-cover"
           priority
-          data-ai-hint="modern gym"
+          data-ai-hint="modern gym interior"
         />
+        {/* Light dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/40 z-0" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl animate-fade-in">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm mb-6 border border-white/20">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span>4.9 Star Rated by 500+ Members</span>
+        <div className="max-w-4xl mx-auto animate-fade-in flex flex-col items-center">
+          {/* Trust Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-5 py-2 rounded-full text-white text-sm font-semibold mb-8 border border-white/20 shadow-xl">
+            <span className="text-yellow-400">⭐</span>
+            <span>4.9 Rating | 364+ Members</span>
           </div>
           
-          <h1 className="font-headline text-5xl md:text-7xl text-white mb-6 leading-[1.1]">
-            Transform Your <span className="text-primary italic">Body</span>, <br />
-            Define Your <span className="text-primary italic">Life</span>.
+          <h1 className="font-headline text-5xl md:text-7xl text-white mb-6 leading-[1.1] font-extrabold tracking-tight">
+            Train at Dombivli’s <br />
+            <span className="text-primary italic">Most Trusted Gym</span> <br />
+            – Force Fitness
           </h1>
           
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl leading-relaxed">
-            Elevate your fitness journey at our premium studio. Expert coaching, 
-            world-class equipment, and a community that pushes you to be your absolute best.
+          <p className="text-lg md:text-2xl text-white/90 mb-10 max-w-2xl leading-relaxed font-medium">
+            Clean environment, friendly trainers, and real fitness results.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="h-14 px-8 bg-primary hover:bg-primary/90 text-white text-lg rounded-xl shadow-xl shadow-primary/20">
-              Start Your Free Trial
-              <ChevronRight className="ml-2 w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+            <Button size="lg" className="h-16 px-10 bg-primary hover:bg-primary/90 text-white text-xl font-bold rounded-2xl shadow-2xl shadow-primary/30 transition-all hover:scale-105" asChild>
+              <a href="#pricing">Join Now</a>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-white border-white/30 hover:bg-white/10 text-lg rounded-xl backdrop-blur-sm">
-              View Membership Plans
+            <Button size="lg" variant="outline" className="h-16 px-10 text-white border-white/40 hover:bg-white/10 text-xl font-bold rounded-2xl backdrop-blur-sm transition-all hover:scale-105 gap-2" asChild>
+              <a href="tel:+911234567890">
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
             {[
-              "Professional Trainers",
-              "24/7 Premium Access",
-              "Modern Equipment"
+              "Verified Cleanliness",
+              "Expert Personal Coaching",
+              "Top-Tier Modern Equipment"
             ].map((feature) => (
-              <div key={feature} className="flex items-center gap-2 text-white/90">
-                <CheckCircle2 className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">{feature}</span>
+              <div key={feature} className="flex items-center gap-2 text-white/95 justify-center md:justify-start">
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                <span className="text-sm font-bold tracking-wide uppercase">{feature}</span>
               </div>
             ))}
           </div>

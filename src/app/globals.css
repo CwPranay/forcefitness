@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 0 0% 97%; /* Light grey shade */
     --foreground: 0 0% 7%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 7%;
@@ -13,16 +13,16 @@
     --popover-foreground: 0 0% 7%;
     --primary: 207 90% 68%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 97%;
+    --secondary: 0 0% 95%;
     --secondary-foreground: 0 0% 7%;
-    --muted: 0 0% 97%;
+    --muted: 0 0% 94%;
     --muted-foreground: 0 0% 45%;
     --accent: 207 90% 96%;
     --accent-foreground: 207 90% 40%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 92%;
-    --input: 0 0% 92%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 207 90% 68%;
     --radius: 0.75rem;
   }
@@ -52,5 +52,15 @@
 }
 
 .glass-header {
-  @apply bg-white/80 backdrop-blur-md border-b border-white/20;
+  @apply bg-white/90 backdrop-blur-md border-b border-border/50;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

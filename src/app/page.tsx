@@ -8,6 +8,7 @@ import { Pricing } from "@/components/sections/Pricing";
 import { Gallery } from "@/components/sections/Gallery";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFloat } from "@/components/ui/whatsapp-float";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Gallery />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
     </main>
   );
 }
