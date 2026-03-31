@@ -106,6 +106,7 @@ export function Pricing() {
               </div>
 
               <Button 
+                
                 className={cn(
                   "w-full h-16 text-lg rounded-2xl font-bold transition-all shadow-lg",
                   plan.highlight 

@@ -82,7 +82,7 @@ export function Header() {
             </a>
           </Button>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl px-8 shadow-xl shadow-primary/20 transition-all hover:scale-105" asChild>
-            <Link href="#pricing">Join Now</Link>
+            <Link href="#contact">Join Now</Link>
           </Button>
         </div>
 
