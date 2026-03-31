@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Badge } from "@/components/ui/badge";
@@ -54,17 +55,16 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-5xl mx-auto aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border bg-white flex items-center justify-center">
-          <div className="text-center z-10 p-6">
-            <MapPin className="w-16 h-16 text-primary mx-auto mb-4 animate-bounce" />
-            <p className="font-bold text-2xl font-headline mb-2">Dombivli Location</p>
-            <p className="text-muted-foreground font-medium">Click to open in Google Maps</p>
-            <Button variant="link" className="text-primary mt-2" asChild>
-              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Get Directions</a>
-            </Button>
-          </div>
-          <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
-          <div className="absolute inset-0 -z-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px]" />
+        <div className="w-full max-w-5xl mx-auto aspect-video md:aspect-[21/9] rounded-[3rem] overflow-hidden shadow-2xl border bg-white">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7535.36793825705!2d73.0872801935791!3d19.20900090000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795e8411043a1%3A0x6c3adf572afe7f5a!2sFORCE%20FITNESS!5e0!3m2!1sen!2sin!4v1774934452902!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>
