@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Clock, Mail, Instagram, Facebook, Send } from "lucide-react";
+import { MapPin, Phone, Clock, Send } from "lucide-react";
 
 export function Contact() {
   return (
@@ -33,8 +33,7 @@ export function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Call/Support</h4>
-                  <p className="text-muted-foreground">+1 (555) 012-3456</p>
-                  <p className="text-muted-foreground">+1 (555) 789-0123</p>
+                  <p className="text-muted-foreground">07700077880</p>
                 </div>
               </div>
 

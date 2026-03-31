@@ -70,9 +70,9 @@ export function Header() {
             "gap-2 font-semibold",
             isScrolled ? "text-foreground" : "text-white hover:bg-white/10"
           )} asChild>
-            <a href="tel:+911234567890">
+            <a href="tel:07700077880">
               <Phone className="w-4 h-4" />
-              Call Now
+              07700077880
             </a>
           </Button>
           <Button size="sm" className="bg-primary hover:bg-primary/90 text-white font-bold px-6 shadow-lg shadow-primary/20" asChild>
@@ -112,9 +112,9 @@ export function Header() {
           ))}
           <div className="grid grid-cols-1 gap-4 pt-4">
             <Button variant="outline" className="gap-2 h-14 text-lg font-bold" asChild>
-              <a href="tel:+911234567890">
+              <a href="tel:07700077880">
                 <Phone className="w-5 h-5" />
-                Call Now
+                Call 07700077880
               </a>
             </Button>
             <Button className="bg-primary hover:bg-primary/90 text-white h-14 text-lg font-bold shadow-lg shadow-primary/20" asChild>
